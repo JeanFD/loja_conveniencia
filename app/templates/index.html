@@ -89,7 +89,7 @@
                 {% for produto in produtos %}
                 
                 <tr>
-                    <td>{{ produto.nome }}</td>
+                    <td><a href="{% url 'produto' produto.id %}">{{ produto.nome }}</a></td>
                     <td>{{ produto.fabricante }}</td>
                     <td>
                         {% if produto.imagem %}
