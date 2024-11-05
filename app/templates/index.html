@@ -80,7 +80,6 @@
                 <tr>
                     <th scope="col">Nome</th>
                     <th scope="col">Fabricante</th>
-                    <th scope="col">Imagem</th>
                     <th scope="col">Preço</th>
                     <th scope="col">Categoria</th>
                 </tr>
@@ -91,13 +90,6 @@
                 <tr>
                     <td><a href="{% url 'produto' produto.id %}">{{ produto.nome }}</a></td>
                     <td>{{ produto.fabricante }}</td>
-                    <td>
-                        {% if produto.imagem %}
-                            <img src="{{ produto.imagem.url }}" alt="{{ produto.nome }}" style="width: 100px; height: auto;">
-                        {% else %}
-                            Sem imagem
-                        {% endif %}
-                    </td>
                     <td>{{ produto.preco }}</td>
                     <td>{{ produto.categoria.nome }}</td> 
                     
